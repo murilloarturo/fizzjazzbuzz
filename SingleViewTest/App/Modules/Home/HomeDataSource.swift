@@ -9,7 +9,7 @@ import UIKit
 
 final class HomeDataSource: NSObject {
     private let reusableIdentifier = "NumberCell"
-    private var items: [NumberType] = []
+    private var items: [String] = []
 
     weak var collectionView: UICollectionView? {
         didSet {
@@ -17,7 +17,7 @@ final class HomeDataSource: NSObject {
         }
     }
 
-    func updateResult(_ result: [NumberType]) {
+    func updateResult(_ result: [String]) {
         self.items = result
         collectionView?.reloadData()
     }

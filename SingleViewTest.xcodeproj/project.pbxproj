@@ -20,6 +20,11 @@
 		699ABC22267C154F00A998B5 /* NumberTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699ABC20267C154F00A998B5 /* NumberTypeCell.swift */; };
 		699ABC23267C154F00A998B5 /* NumberTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 699ABC21267C154F00A998B5 /* NumberTypeCell.xib */; };
 		699ABC36267C1DC800A998B5 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699ABC35267C1DC800A998B5 /* UserDefaultsManager.swift */; };
+		69CCA65A267FCC8B0023FA12 /* LogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCA659267FCC8B0023FA12 /* LogViewModel.swift */; };
+		69CCA662267FD2DD0023FA12 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCA661267FD2DD0023FA12 /* LogViewController.swift */; };
+		69CCA6682680391F0023FA12 /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCA6662680391F0023FA12 /* LogTableViewCell.swift */; };
+		69CCA6692680391F0023FA12 /* LogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CCA6672680391F0023FA12 /* LogTableViewCell.xib */; };
+		69CCA67826803E110023FA12 /* LogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCA67726803E110023FA12 /* LogDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		699ABC20267C154F00A998B5 /* NumberTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTypeCell.swift; sourceTree = "<group>"; };
 		699ABC21267C154F00A998B5 /* NumberTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberTypeCell.xib; sourceTree = "<group>"; };
 		699ABC35267C1DC800A998B5 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		69CCA659267FCC8B0023FA12 /* LogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewModel.swift; sourceTree = "<group>"; };
+		69CCA661267FD2DD0023FA12 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		69CCA6662680391F0023FA12 /* LogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewCell.swift; sourceTree = "<group>"; };
+		69CCA6672680391F0023FA12 /* LogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogTableViewCell.xib; sourceTree = "<group>"; };
+		69CCA67726803E110023FA12 /* LogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +156,8 @@
 		699ABC0F267C0F0600A998B5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				69CCA66D26803D360023FA12 /* LogDetail */,
+				69CCA64E267FB1E00023FA12 /* Logs */,
 				699ABC10267C0F0F00A998B5 /* Home */,
 			);
 			path = Modules;
@@ -213,6 +225,49 @@
 				699ABC35267C1DC800A998B5 /* UserDefaultsManager.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		69CCA64E267FB1E00023FA12 /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+				69CCA658267FCBCE0023FA12 /* ViewModel */,
+				69CCA657267FCBBD0023FA12 /* ViewController */,
+			);
+			path = Logs;
+			sourceTree = "<group>";
+		};
+		69CCA657267FCBBD0023FA12 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				69CCA661267FD2DD0023FA12 /* LogViewController.swift */,
+				69CCA6662680391F0023FA12 /* LogTableViewCell.swift */,
+				69CCA6672680391F0023FA12 /* LogTableViewCell.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		69CCA658267FCBCE0023FA12 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				69CCA659267FCC8B0023FA12 /* LogViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		69CCA66D26803D360023FA12 /* LogDetail */ = {
+			isa = PBXGroup;
+			children = (
+				69CCA66E26803D400023FA12 /* ViewController */,
+			);
+			path = LogDetail;
+			sourceTree = "<group>";
+		};
+		69CCA66E26803D400023FA12 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				69CCA67726803E110023FA12 /* LogDetailViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				699ABBE8267C0D0A00A998B5 /* LaunchScreen.storyboard in Resources */,
+				69CCA6692680391F0023FA12 /* LogTableViewCell.xib in Resources */,
 				699ABBE5267C0D0A00A998B5 /* Assets.xcassets in Resources */,
 				699ABC23267C154F00A998B5 /* NumberTypeCell.xib in Resources */,
 				699ABBE3267C0D0A00A998B5 /* Main.storyboard in Resources */,
@@ -349,9 +405,13 @@
 				699ABC1A267C13E900A998B5 /* HomeDataSource.swift in Sources */,
 				699ABBE0267C0D0A00A998B5 /* ViewController.swift in Sources */,
 				699ABC22267C154F00A998B5 /* NumberTypeCell.swift in Sources */,
+				69CCA662267FD2DD0023FA12 /* LogViewController.swift in Sources */,
 				699ABC36267C1DC800A998B5 /* UserDefaultsManager.swift in Sources */,
 				699ABBDC267C0D0A00A998B5 /* AppDelegate.swift in Sources */,
 				699ABBDE267C0D0A00A998B5 /* SceneDelegate.swift in Sources */,
+				69CCA65A267FCC8B0023FA12 /* LogViewModel.swift in Sources */,
+				69CCA67826803E110023FA12 /* LogDetailViewController.swift in Sources */,
+				69CCA6682680391F0023FA12 /* LogTableViewCell.swift in Sources */,
 				699ABC12267C0F1F00A998B5 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,7 +595,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Rappi.SingleViewTest;
+				PRODUCT_BUNDLE_IDENTIFIER = AM.SingleViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -554,7 +614,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Rappi.SingleViewTest;
+				PRODUCT_BUNDLE_IDENTIFIER = AM.SingleViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

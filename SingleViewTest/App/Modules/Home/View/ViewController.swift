@@ -27,6 +27,7 @@ class ViewController: UIViewController {
 private extension ViewController {
     func setup() {
         inputTextField.delegate = self
+        title = "FizzBuzzJazz"
     }
 
     func calculateNumbers() {
@@ -35,8 +36,12 @@ private extension ViewController {
             return
         }
 
-        if let response = viewModel.tryToCalulateNumbers(with: text) {
-            textView.text = response
+        viewModel.logEntry(text)
+
+        let response = viewModel.tryToCalulateNumbers(with: text)
+        if !response.isEmpty {
+            let formattedString = viewModel.formatString(response.description)
+            textView.attributedText = formattedString
         } else {
             textView.text = "Try another number!!"
         }

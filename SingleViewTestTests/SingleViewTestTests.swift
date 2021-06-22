@@ -19,41 +19,50 @@ class SingleViewTestTests: XCTestCase {
         sut = nil
     }
 
-    func testTryToCalculateNumbers() {
-        let emptyResult = sut.tryToCalulateNumbers(with: "")
-        XCTAssertNil(emptyResult)
+    func testCalculateFizzBuzzJazz() {
+        let normal = sut.calculateFizzBuzzJazz(for: 1)
+        XCTAssertEqual(normal, "1")
 
-        let zeroResult = sut.tryToCalulateNumbers(with: "0")
-        XCTAssertNil(zeroResult)
+        let fizz = sut.calculateFizzBuzzJazz(for: 3)
+        XCTAssertEqual(fizz, "Fizz")
 
-        let invalidResult = sut.tryToCalulateNumbers(with: "abc")
-        XCTAssertNil(invalidResult)
+        let buzz = sut.calculateFizzBuzzJazz(for: 5)
+        XCTAssertEqual(buzz, "Buzz")
+
+        let jazz = sut.calculateFizzBuzzJazz(for: 7)
+        XCTAssertEqual(jazz, "Jazz")
+
+        let fizzBuzz = sut.calculateFizzBuzzJazz(for: 15)
+        XCTAssertEqual(fizzBuzz, "FizzBuzz")
+
+        let fizzJazz = sut.calculateFizzBuzzJazz(for: 21)
+        XCTAssertEqual(fizzJazz, "FizzJazz")
+
+        let buzzJazz = sut.calculateFizzBuzzJazz(for: 35)
+        XCTAssertEqual(buzzJazz, "BuzzJazz")
+
+        let fizzBuzzJazz = sut.calculateFizzBuzzJazz(for: 105)
+        XCTAssertEqual(fizzBuzzJazz, "FizzBuzzJazz")
     }
 
-    func testValidateNumberMultipleOf() {
-        XCTAssertTrue(sut.validateNumberIsMultipleOf(number: 3, numberToValidate: 3))
+    func testCalculateFizzBuzzJazzNumbers() {
+        let result = sut.calculateFizzBuzzJazzNumbers(for: 3)
+        XCTAssertEqual(result.count, 3)
 
-        XCTAssertTrue(sut.validateNumberIsMultipleOf(number: 5, numberToValidate: 5))
+        XCTAssertEqual(result.first, "1")
 
-        XCTAssertTrue(sut.validateNumberIsMultipleOf(number: 7, numberToValidate: 7))
-
-        XCTAssertFalse(sut.validateNumberIsMultipleOf(number: 2, numberToValidate: 5))
-
-        XCTAssertFalse(sut.validateNumberIsMultipleOf(number: 13, numberToValidate: 3))
-
-        XCTAssertFalse(sut.validateNumberIsMultipleOf(number: 13, numberToValidate: 5))
-
-        XCTAssertFalse(sut.validateNumberIsMultipleOf(number: 13, numberToValidate: 7))
+        XCTAssertEqual(result.last, "Fizz")
     }
 
-    func testCalculateNumbers() {
-        let response = sut.calculateNumbers(with: 21)
-        XCTAssertEqual(response.count, 21)
+    func testTryToCalulateNumbers() {
+        XCTAssertTrue(sut.tryToCalulateNumbers(with: "0").isEmpty)
+        XCTAssertTrue(sut.tryToCalulateNumbers(with: "abc").isEmpty)
+        XCTAssertFalse(sut.tryToCalulateNumbers(with: "3").isEmpty)
+    }
 
-        XCTAssertEqual(response[0].titleString, "1")
-        XCTAssertEqual(response[2].titleString, "Fizz")
-        XCTAssertEqual(response[4].titleString, "Buzz")
-        XCTAssertEqual(response[6].titleString, "Jazz")
-        XCTAssertEqual(response[14].titleString, "FizzBuzz")
+    func testFormatNumbers() {
+        let result = sut.calculateFizzBuzzJazzNumbers(for: 3)
+        let format = sut.formatNumbers(numbers: result)
+        XCTAssertEqual(format, "1, \n2, \nFizz")
     }
 }

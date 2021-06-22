@@ -15,7 +15,7 @@ class NumberTypeCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func update(with type: NumberType) {
+    func update(with type: String) {
 //        titleLabel.attributedText = type.title
     }
 }
